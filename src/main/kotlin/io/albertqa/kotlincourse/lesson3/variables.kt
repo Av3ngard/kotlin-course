@@ -32,115 +32,127 @@ var status: String = "Не начат"
 val sponsor: String = "KFC"
 
 //Бюджет мероприятия
-var total_budget: Int = 1200000
+var totalBudget: Int = 1200000
 
 //Текущий уровень доступа к интернету
-var connection_status: String = "Connected"
+var connectionStatus: Int = 10
 
 //Информация о транспортировке оборудования, распределении ресурсов и координации между различными командами поддержки.
 private var transport: String = "Info"
 
 //Количество команд
-var commands_quantity: Int = 5
+var commandQuantity: Int = 0
 
 //Перечень задач
-var tasks: String = "Tasks"
+val tasks: String = "Tasks"
 
 //План эвакуации
-val evacuation_plan: String = "Plan"
+val evacuationPlan: String = "Plan"
 
 //Список доступного оборудования
-var connection_status: String = "Connected"
+var availableEquipment: String = "50"
 
 //Список свободного оборудования
-var connection_status: String = "Connected"
+var freeEquipment: String = "50"
 
 //График питания участников (зависит от поставщика питания, определяемого за неделю до начала)
-var connection_status: String = "Connected"
+lateinit var foodSchedule: String
 
 //План мероприятий на случай сбоев
-var connection_status: String = "Connected"
+var failurePlan: String = "Fail"
 
 //Список экспертов и жюри
-var connection_status: String = "Connected"
+var listExpert: String = "Experts"
 
 //Методы и процедуры для сбора отзывов от участников и гостей, включая анонимные опросы и интервью.
-var connection_status: String = "Connected"
+var feedback: String by lazy {
+    "Feedbacks"
+}
 
 //Политика конфиденциальности
-var connection_status: String = "Connected"
+val policy: String = "Policy"
 
 //Приватные отзывы (фидбэк) участников и зрителей для анализа проблем.
-var connection_status: String = "Connected"
+private var privateFeedback: String by lazy {
+    "Feedbacks"
+}
 
 //Текущая температура в помещении
-var connection_status: String = "Connected"
+var currentTemperature: Int = 22
 
 //Мониторинг и анализ производительности сетевого оборудования и интернет-соединения.
-var connection_status: String = "Connected"
+var netMonitor: String = "1GB/s"
 
 //Уровень освещения
-var connection_status: String = "Connected"
+var lightLevel: Int = 80
 
 //Лог событий мероприятия
-var connection_status: String = "Connected"
+private var Logs: String = "Logs"
 
 //Доступность медицинской помощи
-var connection_status: String = "Connected"
+var med: String = "Available"
 
 //Планы и процедуры для обеспечения безопасности мероприятия, включая планы эвакуации и протоколы чрезвычайных ситуаций.
-var connection_status: String = "Connected"
+private var safetyPlan: String = "Plan"
 
 //Регистрационный номер мероприятия
 val regnumber: Int = 123
 
 //Максимально допустимый уровень шума в помещении хакатона.
-var connection_status: String = "Connected"
+var noiseLevel: Int = 70
 
 //Индикатор превышения уровня шума в помещениях
-var connection_status: String = "Connected"
+val noiseIndicator: Boolean = false
 
 //Формат мероприятия (зависит от геополитической обстановки)
-var connection_status: String = "Connected"
+var eventFormat: String = "Open"
 
 //Количество свободных мест для отдыха (например, кресел или диванов), сеттер валидирует, чтобы количество не было меньше нуля.
-var connection_status: String = "Connected"
+var availablePlace: Int = 0
+    get() = field
+    set(value){
+        if (value >= 0) field = value
+    }
 
 //План взаимодействия с прессой
-var connection_status: String = "Connected"
+var media: String = "Plan"
 
 //Детальная информация о проектах каждой команды, сбор данных включает в себя компиляцию кода и сбор статистики прогона автоматизированных проверок.
-var connection_status: String = "Connected"
+var projectInfo: String by lazy {
+    "Info"
+}
 
 //Статус получения всех необходимых разрешений
-var connection_status: String = "Connected"
+var permissionStatus: String = "Done"
 
 //Указывает, открыт ли доступ к эксклюзивным ресурсам (например, специальному оборудованию)
-var connection_status: String = "Connected"
+var exclusiveRes: String = "Public"
 
 //Список партнеров мероприятия
-var connection_status: String = "Connected"
+var partnerList: String = "Partners"
 
 //Отчет, включающий фотографии, видео и отзывы, генерируется и становится доступен после завершения мероприятия.
-var connection_status: String = "Connected"
+var Report: String by lazy {
+    "Report"
+}
 
 //План распределения призов
-var connection_status: String = "Connected"
+var awards: String = "Awards"
 
 //Контактная информация экстренных служб, медицинского персонала и других важных служб, недоступная участникам.
-var connection_status: String = "Connected"
+private var rescueContactInfo: String = "12332"
 
 //Особые условия для участников с ограниченными возможностями
-var connection_status: String = "Connected"
+var accesability: String = "Сonditions"
 
 //Общее настроение участников (определяется опросами)
-var connection_status: String = "Connected"
+var mood: String = "Good"
 
 //Подробный план хакатона, включающий время и содержание каждого сегмента, инициализируется непосредственно перед началом мероприятия.
-var connection_status: String = "Connected"
+var hackPlan: String = "Plan"
 
 //Имя знаменитого специального гостя, которое будет объявлено за день до мероприятия.
-var connection_status: String = "Connected"
+var specialGuest: String = "Ilon Musk"
 
 //Максимальное количество людей, которое может вместить место проведения.
 val max_people: Int = 500
