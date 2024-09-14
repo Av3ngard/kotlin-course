@@ -11,8 +11,6 @@ val place: String = "Moscow"
 
 //Подробный бюджет мероприятия, включая расходы на оборудование, кейтеринг и другие операционные расходы.
 var equipment: String = "100000"
-var catering: String = "1000"
-var costs: String = "10000"
 
 //Количество участников
 var member: Int = 0
